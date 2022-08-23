@@ -1,6 +1,10 @@
+--   QUESTION1:  You are required to create tables for supplier,customer,category,product,supplier_pricing,order,rating to store the data for the E-commerce with the schema definition given below.
+
 create database if not exists E_Commerce;
 
 use E_Commerce;
+
+--                CREATING 7 TABLES MENTIONED: supplier, customer, category, product, supplier_pricing, order, rating
 
 CREATE TABLE IF NOT EXISTS supplier(
 SUPP_ID int primary key,
@@ -61,6 +65,12 @@ PRIMARY KEY (RAT_ID),
 FOREIGN KEY (ORD_ID) REFERENCES `order`(ORD_ID)
 );
 
+-- ----------------------------------------------------------------------------------------------------------------------------------
+
+-- QUESTION 2: Insert the following data in the table created above
+
+-- INSERTING INTO 7 TABLES MENTIONED: supplier, customer, category, product, supplier_pricing, order, rating
+
 INSERT INTO SUPPLIER VALUES(1,"Rajesh Retails","Delhi",'1234567890');
 INSERT INTO SUPPLIER VALUES(2,"Appario Ltd.","Mumbai",'2589631470');
 INSERT INTO SUPPLIER VALUES(3,"Knome products","Banglore",'9785462315');
@@ -73,7 +83,6 @@ INSERT INTO CUSTOMER VALUES(3,"NEHA",'9999999999',"MUMBAI",'F');
 INSERT INTO CUSTOMER VALUES(4,"MEGHA",'9994562399',"KOLKATA",'F');
 INSERT INTO CUSTOMER VALUES(5,"PULKIT",'7895999999',"LUCKNOW",'M');
 
-select * from customer;
 INSERT INTO CATEGORY VALUES( 1,"BOOKS");
 INSERT INTO CATEGORY VALUES(2,"GAMES");
 INSERT INTO CATEGORY VALUES(3,"GROCERIES");
